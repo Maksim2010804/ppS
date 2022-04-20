@@ -9,9 +9,21 @@ def converter():
     from subprocess import call
     call(["python", "Converter.py"])
 
+def kalk():
+    from subprocess import call
+    call(["python", "kalk.py"])
+
 def knb():
     from subprocess import call
     call(["python", "KNB.py"])
+
+def zm():
+    from subprocess import call
+    call(["python", "zmeika.py"])
+
+def kn():
+    from subprocess import call
+    call(["python", "krnol.py"])
 
 def exit():
     choice = mb.askyesno("Выход", "Вы действительно хотите выйти?")
@@ -40,12 +52,18 @@ game = Label(root, text = "Выбор игр")
 game.grid(row=0, column=0, padx=10, pady=10)
 okbtn = Button(root, text = "Камень, ножницы, бумага", bg='black', fg='white', command= knb)
 okbtn.grid(row=1, column=0, padx=10, pady=10)
+okbtn = Button(root, text = "Змейка", bg='black', fg='white', command= zm)
+okbtn.grid(row=2, column=0, padx=10, pady=10)
+okbtn = Button(root, text = "Kрестики нолики", bg='black', fg='white', command= kn)
+okbtn.grid(row=3, column=0, padx=10, pady=10)
 pril = Label(root, text = "Выбор приложений")
 pril.grid(row=0, column=1, padx=10, pady=10)
 okbtn = Button(root, text = "Пей правильно", bg='black', fg='white', command= drinki)
 okbtn.grid(row=1, column=1, padx=10, pady=10)
 okbtn = Button(root, text = "Конвертер", bg='black', fg='white', command= converter)
 okbtn.grid(row=2, column=1, padx=10, pady=10)
+okbtn = Button(root, text = "Калькулятор", bg='black', fg='white', command= kalk)
+okbtn.grid(row=3, column=1, padx=10, pady=10)
 
 filemenu = Menu(mainmenu, tearoff=0)
 filemenu.add_command(label="Выход", command=exit)
